@@ -1,0 +1,24 @@
+{% extends 'cms/base.html' %}
+
+{% block content %}
+<table class = "table table-stripped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+      {% for item in object_list %}
+      <tr>
+          <td>{{item.name}}</td>
+          <td><button class ="btn btn-warning">Edit</button></td>
+          <td><button class ="btn btn-delete">Delete</button></td>
+      </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}

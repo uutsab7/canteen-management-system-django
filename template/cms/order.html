@@ -1,0 +1,42 @@
+{% extends 'cms/base.html' %}
+
+{% block content %}
+    <h1>ORDER FOOD</h1>
+    <div class="col-sm-12">
+        <table class="table table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Order</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for food in foods %}
+                    <tr>
+                    <td>{{ food.name }}</td>
+                    <td>{{ food.price }}</td>
+                    <td>{{ food.qty }}</td>
+                        <td>
+                            <a href="{% url 'cms:order_item' id=food.id %}">
+                            <button class="btn btn-warning">Order
+                            </a>
+                            </button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% if 0 %}
+        <p>If was true</p>
+    {% elif 0 %}
+        <p>elif is executed</p>
+    {% else %}
+        <p>both the conditionals are false </p>
+    {% endif %}
+
+    {# this is a comment #}
+{% endblock %}

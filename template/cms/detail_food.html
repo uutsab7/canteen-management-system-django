@@ -1,0 +1,9 @@
+{% extends 'cms/base.html' %}
+
+{% block content %}
+ <h1> {{ FoodItem.name }}</h1>
+<p>the price is {{FoodItem.price}}</p>
+<p>the quantity is {{FoodItem.qty}}</p>
+<p>the discount is {{FoodItem.discount}}</p>
+
+{% endblock %}
